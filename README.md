@@ -5,7 +5,7 @@ The problem at hand is to fit generalized linear model, tree model (Random fores
 Approach:
 
 For Boston Dataset:
-•	Divided the dataset into 75% train and 25% test dataset. /n
+•	Divided the dataset into 75% train and 25% test dataset.
 •	Created a linear model using all the variables, with stepwise and best subset variable selection methods on training dataset.
 •	Calculated in sample and out of sample prediction error for all the models.
 •	Created tree model using all the variables, bagging, boosting and random forest.
