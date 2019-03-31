@@ -1,5 +1,7 @@
 # Linear-Non-Linear-Decision-Trees-Neural-Network-Logistic-regression
 
+I did this project in my Data Mining class under Prof. Yan Yu.
+
 Goal and Background:
 The problem at hand is to fit generalized linear model, tree model (Random forest, Bagging, Boosting), Generalised Additive models and Neural Network for Boston Housing dataset and German Credit Scoring dataset. We need to do these for regression and classification problems and the response variable of Boston Housing dataset is quantitative and of German Credit Scoring dataset is qualitative.  
 Approach:
