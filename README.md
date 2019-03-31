@@ -24,13 +24,4 @@ For Credit Scoring Dataset:
 •	Built GAM model using all the variables to calculate in sample and out sample prediction error.
 •	Designed neural network and calculated in sample and out of sample prediction error.
 
-Major Findings:
 
-Model	Boston Data	Credit Data
-MSE(In Sample)	MSE(Out of Sample)	MSE(In Sample)	MSE(Out of Sample)
-GLM	25.60242	13.92252	0.09899	0.1021007
-Tree	2.478184	5.526306	0.34266	0.424
-GAM	8.889896	14.09725	0.22	0.27
-Neural Network	4.109685	10.57118	0.624	0.6373333
-
-We see that in Boston housing data, Tree and Neural Network models perform better than GAM and GLM. In Credit data, GLM and GAM perform better.
