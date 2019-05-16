@@ -4,43 +4,6 @@ data(Boston)
 set.seed(45678912)
 str(Boston)
 sapply(Boston, class)
-mean_medv <- mean(Boston$medv)
-Boston$medv_greater_than_mean = NA
-Boston$medv_greater_than_mean = as.numeric(Boston$medv_greater_than_mean )
-Boston$medv_greater_than_mean = as.numeric(Boston$chas)
-Boston$medv_greater_than_mean = as.numeric(Boston$rad )
-
-
-for (i in 1:nrow(Boston)) {
-  if (Boston$medv[i] > mean_medv){
-    Boston$medv_greater_than_mean[i] = 1
-  }
-  else{
-    Boston$medv_greater_than_mean[i] = 0
-  }
-}
-Boston <- as.data.frame(Boston)
-index <- sample(nrow(Boston), nrow(Boston)*0.75)
-boston.train.glm <- Boston[index,]
-boston.test.glm <- Boston[-index,]
-boston.glm0<- glm(medv_greater_than_mean~., data=boston.train.glm)
-summary(boston.glm0)
-mse_boston.glm0_train = mean(boston.glm0$residuals^2)
-
-mse_boston.glm0_train
-
-library(ROCR)
-#in sample
-pred.boston.glm0<- predict(boston.glm0, type = "response")
-prediction.boston.glm0 <- prediction(pred.boston.glm0, boston.train.glm$medv_greater_than_mean)
-perf.boston.glm0 <- performance(prediction.boston.glm0, "tpr", "fpr")
-plot(perf.boston.glm0, colorize=TRUE, main = 'ROC curve')
-#out of sample
-pred.boston.glm0<- predict(boston.glm0, type = "response")
-prediction.boston.glm0 <- prediction(pred.boston.glm0, boston.test.glm$medv_greater_than_mean)
-perf.boston.glm0 <- performance(prediction.boston.glm0, "tpr", "fpr")
-plot(perf.boston.glm0, colorize=TRUE, main = 'ROC curve')
-
 
 
 
